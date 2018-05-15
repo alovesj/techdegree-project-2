@@ -4,17 +4,18 @@
 body{
   font-family: 'Roboto Condensed', sans-serif;
   text-align: center;
+  font-size: 1.3em;
 }
 .container {
-  padding: 10px;
   display:flex;
   flex-direction: column;
+  margin:2em;
 }
 
 .navbar{
   font-family: 'Oswald', sans-serif;
-  background:turquoise;
-
+  background: #00b3b3;
+  margin-bottom:20px;
 }
 nav a {
   display:block;
@@ -32,15 +33,24 @@ nav a {
   font-family: 'Oswald', sans-serif;
 }
 .profile_image {
-  max-height:120px;
-  width:auto;
-  margin:auto;
+  margin: 0 auto;
+  max-width:100%;
 }
 img {
-  max-height: 160px;
-  width:auto;
-  margin:auto;
-  padding-top:30px;
+  margin: 0 auto;
+  max-width:100%;
+}
+p {
+  padding: 10px;
+  }
+#skills{
+    background:#0099cc;
+    padding:20px;
+}
+#skills ul{
+  list-style: none;
+  padding-left: 0;
+  margin-left:0;
 }
 
 #contact {
@@ -61,36 +71,80 @@ img {
 .footernav a:last-child {
   display:inline-flex;
 }
+.item {
+  margin:5px;
+}
 
 
 @media screen and (min-width:768px) {
 
-  .navbar  {
-    display:flex;
-    flex-direction:column;
-  }
-  .content-container {
-    display:flex;
-    flex-direction:row;
-  }
-  header {
-    flex-direction:
-  }
+  .navbar,
   nav,
-  .first-content{
+  .first-content,
+  .content-container,
+  .content-title {
+    display:flex;
   }
-  nav a{
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding:40px;
+  }
+
+  .first-content  {
+    flex-direction:row-reverse;
+    padding-bottom: 50px;
+  }
+
+  .content-container {
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+
+  }
+  .item {
+    flex: 1 45%;
+  }
+  .content-title {
+    display:block;
+    }
+  .other-content {
+    padding-top: 40px;
+    width:80%;
     margin:auto;
+    }
+  .footernav a{
+    text-transform: uppercase;
+    display:inline;
   }
+  .item-bio {
+    text-align: left;
+  }
+
 }
 @media screen and (min-width:1024px) {
-  .container {
-    background-color:blue;
-  }
+
   nav,
-  .navbar,
-  .content-container {
+  .navbar {
     display:flex;
+    flex-direction: row;
     justify-content: space-between;
   }
+  .item {
+    flex: 1 30%;
+  }
+  .item-bio {
+    flex: 1.5 40%;
+    font-size: 1.3em;
+  }
+  #contact p {
+    text-align: center;
+  }
+  #contact {
+    width:60%;
+    margin:auto;
+    padding-top: 3em;
+  }
+
 }

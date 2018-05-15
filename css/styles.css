@@ -25,6 +25,9 @@ nav a {
   font-size: 1.1em;
   text-transform:uppercase;
 }
+nav a:hover {
+  text-shadow: 2px 2px 5px gray;
+}
 .second-content h3{
   font-family: 'Oswald', sans-serif;
   padding-top: 40px;
@@ -120,6 +123,9 @@ p {
   }
   .item-bio {
     text-align: left;
+  }
+  .footernav a:last-child {
+    display:none;
   }
 
 }

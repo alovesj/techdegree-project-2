@@ -152,5 +152,9 @@ p {
     margin:auto;
     padding-top: 3em;
   }
+  .container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
 
 }
